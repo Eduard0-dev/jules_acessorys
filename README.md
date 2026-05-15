@@ -1,6 +1,7 @@
 <div align="center">
 
-<img src="./imgs/jules.jpeg" width="220px" alt="Jules Accessory Logo"/>
+<img width="855" height="854" alt="image" src="https://github.com/user-attachments/assets/c1993fe7-63bd-476c-8664-9671d76e1812" />
+
 
 # ✨ Jules Accessory
 
