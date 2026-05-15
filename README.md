@@ -57,7 +57,8 @@ A aplicação conta com:
 
 <div align="center">
 
-<img src="./imgs/jules.jpeg" width="300px"/>
+<img width="1886" height="907" alt="image" src="https://github.com/user-attachments/assets/4bb0f7c9-1640-4773-b30f-9c2fc532946a" />
+
 
 </div>
 
