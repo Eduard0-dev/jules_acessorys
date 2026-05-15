@@ -1,0 +1,593 @@
+:root {
+  --bg: #f7efe9;
+  --bg-soft: #fcf7f3;
+  --gold: #c9a06a;
+  --gold-dark: #b4864d;
+  --text: #1f1a17;
+  --muted: #6e6259;
+  --white: #ffffff;
+  --shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  --radius: 22px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #f9f1eb 0%, #fffaf7 100%);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201, 160, 106, 0.18);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand img {
+  width: 62px;
+  height: 62px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(201, 160, 106, 0.35);
+  box-shadow: 0 8px 20px rgba(201, 160, 106, 0.18);
+  background: #fff;
+}
+
+.brand-text h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.9rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.brand-text span {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--gold-dark);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+}
+
+.menu a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--gold-dark);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color: white;
+  box-shadow: 0 10px 25px rgba(180, 134, 77, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid rgba(201, 160, 106, 0.45);
+  color: var(--gold-dark);
+}
+
+.btn-outline:hover {
+  background: rgba(201, 160, 106, 0.08);
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: var(--gold-dark);
+}
+
+
+.hero {
+  padding: 70px 0 40px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 42px;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(201, 160, 106, 0.12);
+  color: var(--gold-dark);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  margin-bottom: 18px;
+}
+
+.hero h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 0.95;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.hero h2 span {
+  color: var(--gold-dark);
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 580px;
+  font-size: 1.03rem;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-card {
+  background: linear-gradient(180deg, #fffaf7 0%, #f5e9e0 100%);
+  border-radius: 30px;
+  padding: 26px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(201, 160, 106, 0.18);
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(201, 160, 106, 0.12);
+  top: -40px;
+  right: -40px;
+}
+
+.hero-logo {
+  position: relative;
+  z-index: 1;
+  background: white;
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
+}
+
+.hero-logo img {
+  width: 100%;
+  border-radius: 18px;
+}
+
+
+section {
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 46px;
+}
+
+.section-title span {
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.section-title h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-top: 10px;
+}
+
+.products {
+  background: var(--bg-soft);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: 0.3s ease;
+  border: 1px solid rgba(201, 160, 106, 0.14);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+.product-card {
+  background: transparent;
+  border-radius: var(--radius);
+  overflow: visible;
+  box-shadow: none;
+  transition: 0.3s ease;
+  border: none;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+.product-image {
+  height: 320px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #f3e7dc;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.product-content {
+  padding: 22px;
+}
+
+.product-content h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.product-content p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+.price {
+  color: var(--gold-dark);
+  font-weight: 700;
+  font-size: 1.08rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.about-box {
+  background: white;
+  border-radius: 26px;
+  padding: 34px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(201, 160, 106, 0.12);
+}
+
+.about-box h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+.about-box p {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.about-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.about-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.about-list li::before {
+  content: "✦";
+  color: var(--gold-dark);
+  font-size: 1rem;
+}
+
+.highlight-box {
+  background: linear-gradient(135deg, #fff8f2 0%, #f3e3d5 100%);
+  border-radius: 26px;
+  padding: 34px;
+  box-shadow: var(--shadow);
+  min-height: 100%;
+  border: 1px solid rgba(201, 160, 106, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.highlight-box .quote {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.highlight-box small {
+  color: var(--gold-dark);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.instagram-section {
+  background: linear-gradient(135deg, #1f1a17 0%, #382d25 100%);
+  color: white;
+}
+
+.instagram-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 34px;
+  border-radius: 28px;
+  backdrop-filter: blur(5px);
+}
+
+.instagram-box h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 8px;
+}
+
+.instagram-box p {
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 720px;
+}
+
+.btn-instagram {
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  color: white;
+  min-width: 210px;
+  box-shadow: 0 12px 30px rgba(221, 42, 123, 0.25);
+}
+
+.btn-instagram:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.04);
+}
+
+.contact {
+  background: var(--bg-soft);
+}
+
+.contact-card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+  padding: 36px;
+  text-align: center;
+  border: 1px solid rgba(201, 160, 106, 0.12);
+}
+
+.contact-card h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.3rem;
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+footer {
+  padding: 28px 0;
+  border-top: 1px solid rgba(201, 160, 106, 0.14);
+  background: #fffaf7;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-content p {
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--gold-dark);
+  font-weight: 600;
+  font-size: 0.94rem;
+}
+
+@media (max-width: 980px) {
+  .hero-grid,
+  .about-grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instagram-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 840px) {
+  .menu,
+  .nav-actions {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0 0 18px;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+  .mobile-menu a {
+    color: var(--muted);
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(201, 160, 106, 0.12);
+  }
+
+  .mobile-instagram {
+    width: fit-content;
+    margin-top: 8px;
+    border-bottom: none !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+
+  .hero-card,
+  .about-box,
+  .highlight-box,
+  .contact-card,
+  .instagram-box {
+    padding: 24px;
+  }
+
+  .product-image {
+    height: 220px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
