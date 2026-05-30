@@ -110,6 +110,10 @@ header {
   color: var(--gold-dark);
 }
 
+.menu.active {
+  display: flex;
+}
+
 .nav-actions {
   display: flex;
   align-items: center;
