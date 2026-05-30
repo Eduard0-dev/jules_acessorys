@@ -5,7 +5,7 @@ menuToggle.addEventListener("click", () => {
   mobileMenu.classList.toggle("active");
 });
 
-document.querySelectorAll(".mobile-menu a").forEach((link) => {
+document.querySelectorAll("#mobileMenu a").forEach((link) => {
   link.addEventListener("click", () => {
     mobileMenu.classList.remove("active");
   });
